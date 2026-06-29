@@ -20,9 +20,9 @@ vector<Question> DataLoader::loadData(const string& filename) {
     }
     
     int q_id;
-    while (file >> q_id) {
-        file.ignore(1000, '\n'); 
-
+    while (file >> q_id){
+        char c;
+        file.get(c);
         string q_text;
         getline(file, q_text);
 
@@ -45,6 +45,7 @@ vector<Question> DataLoader::loadData(const string& filename) {
 
         questions.push_back(Question(q_id, q_text, q_options, q_answer));
     }
+    
 
     file.close();
     return questions;
