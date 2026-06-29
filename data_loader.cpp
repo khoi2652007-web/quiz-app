@@ -27,6 +27,7 @@ vector<Question> DataLoader::loadData(const string& filename) {
 
         int num_options;
         file >> num_options;
+        file.ignore();
 
         vector<string> q_options;
         for (int i = 0; i < num_options; ++i) {
@@ -37,6 +38,7 @@ vector<Question> DataLoader::loadData(const string& filename) {
 
         char q_answer;
         file >> q_answer;
+        file.ignore();
 
         questions.push_back(Question(q_id, q_text, q_options, q_answer));
     }
