@@ -39,7 +39,7 @@ bool AnswerManager::showWarningIfSkipped(int totalQuestions) const {
             cout << ", ";
         }
     }
-    cout << "\nBan co chac chan muon nop bai khong? (Y/N): ";
+    cout << "\n";
     return true;
 }
 
