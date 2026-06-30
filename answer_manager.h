@@ -12,7 +12,7 @@ public:
 
     // Các hàm ảo (virtual) sẽ được lớp con ghi đè
     virtual void recordAnswer(int questionIndex, char answer) = 0;
-    virtual char getAnswer(int questionIndex) const = 0; // ĐÃ BỔ SUNG HÀM NÀY
+    virtual char getAnswer(int questionIndex) const = 0;
     virtual bool showWarningIfSkipped(int totalQuestions) const = 0;
 };
 
@@ -23,8 +23,8 @@ private:
 
 public:
     void recordAnswer(int questionIndex, char answer) override;
-    char getAnswer(int questionIndex) const override; // ĐÃ BỔ SUNG HÀM NÀY
+    char getAnswer(int questionIndex) const override;
     vector<int> getSkippedQuestions(int totalQuestions) const;
     bool showWarningIfSkipped(int totalQuestions) const override;
-    map<int, char> getAllAnswers() const;
+    map<int, char> getAllAnswers() const; // Hàm này sẽ được định nghĩa đầy đủ ở file .cpp
 };

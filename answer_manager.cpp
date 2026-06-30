@@ -6,13 +6,12 @@ void AnswerManager::recordAnswer(int questionIndex, char answer) {
     studentAnswers[questionIndex] = answer;
 }
 
-// ĐÃ BỔ SUNG NỘI DUNG HÀM getAnswer
 char AnswerManager::getAnswer(int questionIndex) const {
     auto it = studentAnswers.find(questionIndex);
     if (it != studentAnswers.end()) {
-        return it->second; // Trả về đáp án nếu tìm thấy
+        return it->second;
     }
-    return ' '; // Trả về khoảng trắng nếu thí sinh chưa làm câu này
+    return ' ';
 }
 
 vector<int> AnswerManager::getSkippedQuestions(int totalQuestions) const {
@@ -43,6 +42,7 @@ bool AnswerManager::showWarningIfSkipped(int totalQuestions) const {
     return true;
 }
 
+// ĐÃ THÊM ĐỊNH NGHĨA CHO HÀM NÀY ĐỂ HẾT LỖI
 map<int, char> AnswerManager::getAllAnswers() const {
     return studentAnswers;
 }
