@@ -21,7 +21,7 @@ vector<Question> DataLoader::loadData(const string& filename) {
     
     int q_id;
     while (file >> q_id) {
-        file.ignore(1000, '\n'); 
+        
 
         string q_text;
         getline(file, q_text);
@@ -31,10 +31,12 @@ vector<Question> DataLoader::loadData(const string& filename) {
         file.ignore(1000, '\n');
 
         vector<string> q_options;
-        for (int i = 0; i < num_options; ++i) {
-            string option;
-            if (getline(file, option)) {
-                q_options.push_back(option);
+        string line_options;
+        if (getline( file, line_options)){ 
+            stringstream ss(line_options);
+            string options;
+            while (ss >> options ){
+                q_options.push_back(options);
             }
         }
         char q_answer;
