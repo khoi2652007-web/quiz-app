@@ -31,12 +31,10 @@ vector<Question> DataLoader::loadData(const string& filename) {
         file.ignore(1000, '\n');
 
         vector<string> q_options;
-        string line_options;
-        if (getline( file, line_options)){ 
-            stringstream ss(line_options);
-            string options;
-            while (ss >> options ){
-                q_options.push_back(options);
+        for (int i = 0; i < num_options; ++i) {
+            string option;
+            if (getline(file, option)) {
+                q_options.push_back(option);
             }
         }
         char q_answer;
