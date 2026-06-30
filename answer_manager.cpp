@@ -24,6 +24,7 @@ vector<int> AnswerManager::getSkippedQuestions(int totalQuestions) const {
     return skipped;
 }
 
+// Kiểu trả về ở đây bắt buộc là bool đồng bộ với file .h
 bool AnswerManager::showWarningIfSkipped(int totalQuestions) const {
     vector<int> skipped = getSkippedQuestions(totalQuestions);
 
@@ -42,7 +43,6 @@ bool AnswerManager::showWarningIfSkipped(int totalQuestions) const {
     return true;
 }
 
-// ĐÃ THÊM ĐỊNH NGHĨA CHO HÀM NÀY ĐỂ HẾT LỖI
 map<int, char> AnswerManager::getAllAnswers() const {
     return studentAnswers;
 }
