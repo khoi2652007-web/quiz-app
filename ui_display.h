@@ -28,3 +28,4 @@ public:
     bool xacNhanNopBai() const;
     char nhanPhimInput() const;
 };
+  

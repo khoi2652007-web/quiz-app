@@ -26,5 +26,4 @@ public:
 class DataLoader {
 public:
     static vector<Question> loadData(const string& filename);
-    static void printQuestions(const vector<Question>& questions);
 };

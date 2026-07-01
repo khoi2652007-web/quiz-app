@@ -63,14 +63,13 @@ void UIDisplay::hienThiCauHoi(const Question& q) const {
         dapan++;
     }
 }
-char UIDisplay::nhanPhimInput() const
-{
-    char luaChon;
+char UIDisplay::nhanPhimInput() const {
+    string dongNhap;
     cout << "\nNhap dap an: ";
-    cin >> luaChon;
-
-    cin.ignore(10000, '\n');
-
-    return luaChon;
-
+    getline(cin, dongNhap);
+    if (dongNhap.empty()) {
+        return ' ';
+    }
+    return dongNhap[0];
 }
+  

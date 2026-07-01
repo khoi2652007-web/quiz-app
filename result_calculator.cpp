@@ -98,10 +98,11 @@ void result_calculator::showResult(const string& candidateName, const vector<Que
 
 ostream& operator<<(ostream& os, const result_calculator& calc)
 {
-	os << "[ResultCalculator] Thi sinh: " << calc.reportCandidateName
+	os << "Thi sinh: " << calc.reportCandidateName
 		<< ", So cau dung: " << calc.correctCount
 		<< ", Diem: " << calc.score << "/10";
 	return os;
 }
 
 
+  

@@ -49,26 +49,3 @@ vector<Question> DataLoader::loadData(const string& filename) {
     file.close();
     return questions;
 }
-
-void DataLoader::printQuestions(const vector<Question>& questions) {
-    cout << "\n========================================================" << endl;
-
-    cout << ">>> TỔNG SỐ CÂU HỎI ĐỌC ĐƯỢC TỪ FILE: " << questions.size() << " CÂU. <<<\n" << endl;
-
-    cout << "========================================================" << endl;
-
-    for (const auto& q : questions) {
-        cout << " CÂU HỎI SỐ " << q.getId() << ":" << endl;
-        cout << "   Nội dung: " << q.getQuestionText() << endl;
-        cout << "   Các lựa chọn:" << endl;
-
-        vector<string> opts = q.getOptions();
-        for (size_t i = 0; i < opts.size(); ++i) {
-            char label = 'a' + i;
-            cout << "     [" << label << "] " << opts[i] << endl;
-        }
-
-        cout << "   => ĐÁP ÁN ĐÚNG: " << q.getCorrectAnswer() << endl;
-        cout << "--------------------------------------------------------" << endl;
-    }
-}

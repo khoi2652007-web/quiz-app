@@ -35,13 +35,9 @@ bool AnswerManager::showWarningIfSkipped(int totalQuestions) const {
     for (size_t i = 0; i < skipped.size(); ++i) {
         cout << skipped[i];
         if (i < skipped.size() - 1) {
-            cout << ", ";
+            cout << ", "; 
         }
     }
     cout << "\n";
     return true;
-}
-
-map<int, char> AnswerManager::getAllAnswers() const {
-    return studentAnswers;
 }
