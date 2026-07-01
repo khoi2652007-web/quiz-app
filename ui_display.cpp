@@ -54,9 +54,9 @@ bool UIDisplay::xacNhanNopBai() const {
 }
 
 
-void UIDisplay::hienThiCauHoi(int sothutu, const string& noidung, const vector<string>& danhsachdapan) const {
-    cout << "\nCau " << sothutu << ": " << noidung << endl;
-
+void UIDisplay::hienThiCauHoi(const Question& q) const {
+    cout << "\nCau " << q.getId() << ": " << q.getQuestionText() << endl;
+    vector<string> danhsachdapan = q.getOptions();
     char dapan = 'a';
     for (size_t i = 0; i < danhsachdapan.size(); ++i) {
         cout << "  " << dapan << ") " << danhsachdapan[i] << endl;
