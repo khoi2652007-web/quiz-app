@@ -1,4 +1,5 @@
 #pragma once
+#include "data_loader.h"
 #include <string>
 #include <vector>
 using namespace std;
@@ -23,7 +24,7 @@ class UIDisplay {
 public:
     void hienThiThongTinThiSinh(const Candidate& c) const;
     void hienThiTongSoCauHoi(int tongsocau) const;
-    void hienThiCauHoi(int sothutu, const string& noidung, const vector<string>& danhsachdapan) const;
+    void hienThiCauHoi(const Question& q) const;
     bool xacNhanNopBai() const;
     char nhanPhimInput() const;
 };
