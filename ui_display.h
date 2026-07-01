@@ -5,7 +5,6 @@
 
 using namespace std;
 
-// Class lưu trữ thông tin thí sinh
 class Candidate {
 private:
     string ten;
@@ -21,8 +20,6 @@ public:
     string getMSSV() const;
     string getLop() const;
 };
-
-// Class quản lý giao diện hiển thị
 class UIDisplay {
 public:
     void hienThiThongTinThiSinh(const Candidate& c) const;
